@@ -213,21 +213,66 @@ html, body {
 }
 
 /* Stats Grid */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+/* Building Status */
+.building-status {
+    font-size: 12px;
+    color: #666;
     margin-bottom: 24px;
 }
 
-.stat-number {
-    font-size: 18px;
-    color: #000;
+.status-building {
+    color: #DC143C;
 }
 
-.stat-label {
-    font-size: 12px;
+/* Current Focus */
+.current-focus {
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.focus-title {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.focus-items {
+    font-size: 13px;
     color: #666;
+    line-height: 1.8;
+}
+
+/* Vision Box */
+.vision-box {
+    background: rgba(220, 20, 60, 0.03);
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 2px solid #DC143C;
+}
+
+.vision-text {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Tech Note */
+.tech-note {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Research Note */
+.research-note {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.note-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
 }
 
 /* Badge & Specs */
@@ -241,12 +286,12 @@ code {
     font-family: 'Berkeley Mono', monospace;
 }
 
-/* Research Section */
-.research, .models, .team, .access {
+/* Vision Section */
+.vision, .approach, .contact {
     padding: 96px 0;
 }
 
-.research {
+.vision {
     background: rgba(0, 0, 0, 0.02);
 }
 
@@ -286,129 +331,120 @@ code {
     line-height: 1.8;
 }
 
-/* Models Section */
-.model-showcase {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.ascii-art {
-    background: rgba(0, 0, 0, 0.02);
-    padding: 32px;
-    font-size: 13px;
-    line-height: 1.4;
-    border-radius: 4px;
-    margin-bottom: 32px;
-    overflow-x: auto;
-}
-
-.model-metrics {
-    font-size: 14px;
-}
-
-.metric-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.metric-value {
-    color: #DC143C;
-}
-
-/* Team Section */
-.team {
-    background: rgba(0, 0, 0, 0.02);
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-bottom: 48px;
-}
-
-.team-member {
-    text-align: center;
-    padding: 24px;
-}
-
-.member-name {
+/* Problem & Vision Text */
+.problem-text {
     font-size: 16px;
+    color: #333;
+    line-height: 2;
+    margin-bottom: 32px;
+}
+
+.problem-text p {
     margin-bottom: 8px;
 }
 
-.member-info {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 4px;
-}
-
-.member-focus {
+.divider-section {
+    color: #ccc;
     font-size: 12px;
-    color: #DC143C;
+    margin: 48px 0;
+    text-align: center;
 }
 
-.publications {
+.vision-statement {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
     max-width: 800px;
-    margin: 0 auto;
 }
 
-.pub-title {
-    font-size: 18px;
+.vision-statement p {
     margin-bottom: 16px;
 }
 
-.pub-item {
-    font-size: 13px;
-    color: #666;
+.emphasis {
+    color: #000;
+    font-weight: normal;
+    margin-top: 24px;
+    font-size: 18px;
+}
+
+/* Approach Section */
+.approach {
+    background: #fff;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.approach-item {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.approach-title {
+    font-size: 18px;
+    color: #000;
     margin-bottom: 8px;
 }
 
-/* Access Section */
-.access-content {
+.approach-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.tech-stack {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stack-label {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.stack-items {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.contact-content {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
 }
 
-.access-text {
-    font-size: 14px;
+.contact-text {
+    font-size: 16px;
     color: #666;
     margin-bottom: 32px;
+    line-height: 1.8;
 }
 
-.guarantees {
-    font-size: 12px;
-    color: #666;
-    margin-bottom: 32px;
-    line-height: 2;
-}
-
-.cta-container {
+.contact-details {
     margin: 32px 0;
 }
 
-.cta-button {
-    background: none;
-    border: none;
-    border-bottom: 2px solid #999;
-    font-family: 'Berkeley Mono', monospace;
-    font-size: 16px;
-    padding-bottom: 4px;
-    cursor: pointer;
-    transition: all 0.3s;
+.contact-email {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 24px;
 }
 
-.cta-button:hover {
-    border-bottom-color: #DC143C;
-    color: #DC143C;
-}
-
-.contact {
+.location {
     font-size: 14px;
-    color: #666;
+    color: #999;
 }
 
 /* Footer */
@@ -460,14 +496,8 @@ code {
         font-size: 48px;
     }
 
-    .research-grid,
-    .team-grid {
+    .approach-grid {
         grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
     }
 
     .nav {
