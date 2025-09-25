@@ -24,7 +24,7 @@ html, body {
 }
 
 ::selection {
-    background-color: rgba(220, 20, 60, 0.2);
+    background-color: rgba(30, 58, 138, 0.2);
     color: #000000;
 }
 
@@ -90,7 +90,7 @@ html, body {
 }
 
 .nav a:hover {
-    color: #DC143C;
+    color: #1e3a8a;
 }
 
 /* Hero Section */
@@ -112,7 +112,7 @@ html, body {
 }
 
 .accent {
-    color: #DC143C;
+    color: #1e3a8a;
 }
 
 .divider {
@@ -159,12 +159,12 @@ html, body {
 }
 
 .cursor {
-    color: #DC143C;
+    color: #1e3a8a;
     animation: blink 1s step-end infinite;
 }
 
 .cursor-inline {
-    color: #DC143C;
+    color: #1e3a8a;
     animation: blink 1s step-end infinite;
     opacity: 0.6;
 }
@@ -188,7 +188,7 @@ html, body {
 }
 
 .progress-bar {
-    color: #DC143C;
+    color: #1e3a8a;
 }
 
 /* Status Messages */
@@ -209,7 +209,7 @@ html, body {
 }
 
 .status-ready {
-    color: #DC143C;
+    color: #1e3a8a;
 }
 
 /* Stats Grid */
@@ -221,7 +221,7 @@ html, body {
 }
 
 .status-building {
-    color: #DC143C;
+    color: #1e3a8a;
 }
 
 /* Current Focus */
@@ -244,10 +244,10 @@ html, body {
 
 /* Vision Box */
 .vision-box {
-    background: rgba(220, 20, 60, 0.03);
+    background: rgba(30, 58, 138, 0.03);
     padding: 24px;
     margin: 24px 0;
-    border-left: 2px solid #DC143C;
+    border-left: 2px solid #1e3a8a;
 }
 
 .vision-text {
@@ -445,6 +445,34 @@ code {
 .location {
     font-size: 14px;
     color: #999;
+}
+
+/* Partnerships */
+.partnerships {
+    margin: 32px 0;
+    padding: 24px;
+    background: rgba(30, 58, 138, 0.02);
+    border-radius: 4px;
+}
+
+.partnership-label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.partnership-list {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Stack Specs */
+.stack-specs {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 12px;
+    color: #666;
 }
 
 /* Footer */
