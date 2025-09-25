@@ -1,0 +1,480 @@
+/* Berkeley Mono Font */
+@font-face {
+    font-family: 'Berkeley Mono';
+    src: url('fonts/BerkeleyMonoTrial-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Berkeley Mono', 'Courier New', monospace;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: rgba(220, 20, 60, 0.2);
+    color: #000000;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 50;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.logo {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+}
+
+.nav a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #DC143C;
+}
+
+/* Hero Section */
+.hero {
+    padding: 128px 0 128px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.accent {
+    color: #DC143C;
+}
+
+.divider {
+    color: #999;
+    font-size: 12px;
+    margin: 16px 0;
+}
+
+.tagline {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.feature-block {
+    margin-top: 32px;
+}
+
+.feature-title {
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+.feature-list {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* CLI Container */
+.cli-container {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 24px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+}
+
+.cli-line {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 24px;
+    min-height: 24px;
+}
+
+.cursor {
+    color: #DC143C;
+    animation: blink 1s step-end infinite;
+}
+
+.cursor-inline {
+    color: #DC143C;
+    animation: blink 1s step-end infinite;
+    opacity: 0.6;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+}
+
+/* Progress Section */
+.progress-section {
+    margin-bottom: 24px;
+}
+
+.progress-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+
+.progress-bar {
+    color: #DC143C;
+}
+
+/* Status Messages */
+.status-messages {
+    font-size: 12px;
+    color: #666;
+}
+
+.status-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.status-ok {
+    color: #666;
+}
+
+.status-ready {
+    color: #DC143C;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.stat-number {
+    font-size: 18px;
+    color: #000;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Badge & Specs */
+.badge, .specs {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+code {
+    font-family: 'Berkeley Mono', monospace;
+}
+
+/* Research Section */
+.research, .models, .team, .access {
+    padding: 96px 0;
+}
+
+.research {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 48px;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.research-card {
+    background: #fff;
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.research-card h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 16px;
+}
+
+.code-block {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Models Section */
+.model-showcase {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ascii-art {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 32px;
+    font-size: 13px;
+    line-height: 1.4;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+}
+
+.model-metrics {
+    font-size: 14px;
+}
+
+.metric-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.metric-value {
+    color: #DC143C;
+}
+
+/* Team Section */
+.team {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 24px;
+}
+
+.member-name {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.member-info {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.member-focus {
+    font-size: 12px;
+    color: #DC143C;
+}
+
+.publications {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pub-title {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.pub-item {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+/* Access Section */
+.access-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.access-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 32px;
+}
+
+.guarantees {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 32px;
+    line-height: 2;
+}
+
+.cta-container {
+    margin: 32px 0;
+}
+
+.cta-button {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #999;
+    font-family: 'Berkeley Mono', monospace;
+    font-size: 16px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    border-bottom-color: #DC143C;
+    color: #DC143C;
+}
+
+.contact {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    padding: 64px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-content {
+    font-size: 12px;
+    color: #999;
+    line-height: 2;
+}
+
+/* Grid Background */
+.grid-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 0, 0, 0.02) 40px,
+            rgba(0, 0, 0, 0.02) 41px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 40px,
+            rgba(0, 0, 0, 0.02) 40px,
+            rgba(0, 0, 0, 0.02) 41px
+        );
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .research-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
