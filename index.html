@@ -219,6 +219,44 @@
                     </div>
                 </div>
 
+                <!-- Puzzle Section -->
+                <div class="puzzle-section" id="puzzleSection">
+                    <div class="puzzle-title">Prove you're serious about surgical robotics:</div>
+                    <div class="puzzle-question">
+                        What is the workspace volume of a da Vinci Xi instrument in cubic cm?
+                    </div>
+                    <div class="puzzle-hint">
+                        Hint: Think about the spherical workspace with a 35cm reach...
+                    </div>
+                    <div class="puzzle-input-container">
+                        <input type="number" id="puzzleAnswer" class="puzzle-input" placeholder="Enter volume in cm³">
+                        <button onclick="checkPuzzle()" class="puzzle-submit">Submit</button>
+                    </div>
+                    <div id="puzzleFeedback" class="puzzle-feedback"></div>
+                </div>
+
+                <!-- Contact Form (Hidden until puzzle solved) -->
+                <div class="contact-form-container" id="contactForm" style="display: none;">
+                    <div class="form-success">
+                        <div class="success-text">✓ Access granted. Welcome to the future of surgery.</div>
+                    </div>
+                    <form class="contact-form" onsubmit="handleSubmit(event)">
+                        <input type="text" name="name" placeholder="Name" class="form-input" required>
+                        <input type="email" name="email" placeholder="Email" class="form-input" required>
+                        <input type="text" name="affiliation" placeholder="Institution / Company" class="form-input" required>
+                        <select name="interest" class="form-input" required>
+                            <option value="">Select your interest</option>
+                            <option value="research">Research Collaboration</option>
+                            <option value="investment">Investment</option>
+                            <option value="clinical">Clinical Partnership</option>
+                            <option value="technical">Technical Development</option>
+                        </select>
+                        <textarea name="message" placeholder="Tell us about your work in surgical robotics..." class="form-textarea" rows="4" required></textarea>
+                        <button type="submit" class="form-submit">Send Message</button>
+                    </form>
+                    <div id="formFeedback" class="form-feedback"></div>
+                </div>
+
                 <div class="contact-details">
                     <div class="contact-email">research@surgicalRL.io</div>
                 </div>
@@ -242,6 +280,63 @@
 
     <!-- Background Grid -->
     <div class="grid-background"></div>
+
+    <!-- Scripts -->
+    <script>
+        // Puzzle Logic
+        function checkPuzzle() {
+            const answer = document.getElementById('puzzleAnswer').value;
+            const feedback = document.getElementById('puzzleFeedback');
+
+            // Workspace volume of da Vinci Xi is approximately 179,594 cm³
+            // (4/3 * π * 35³ ≈ 179594)
+            // Accept answers between 179000 and 180000
+            const correctAnswer = 179594;
+            const tolerance = 1000;
+
+            if (answer >= correctAnswer - tolerance && answer <= correctAnswer + tolerance) {
+                feedback.innerHTML = '<span style="color: #1e3a8a;">✓ Correct! Impressive knowledge.</span>';
+                feedback.style.display = 'block';
+
+                // Show form after a brief delay
+                setTimeout(() => {
+                    document.getElementById('puzzleSection').style.opacity = '0.3';
+                    document.getElementById('contactForm').style.display = 'block';
+                    document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+                }, 500);
+            } else if (answer) {
+                feedback.innerHTML = '<span style="color: #666;">Not quite. Remember: V = 4/3πr³</span>';
+                feedback.style.display = 'block';
+            }
+        }
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            const form = event.target;
+
+            // Simulate form submission (doesn't actually send anywhere)
+            feedback.innerHTML = '<span style="color: #1e3a8a;">Message received. We\'ll be in touch if there\'s a fit.</span>';
+            feedback.style.display = 'block';
+
+            // Reset form
+            setTimeout(() => {
+                form.reset();
+            }, 2000);
+
+            return false;
+        }
+
+        // Allow Enter key to submit puzzle
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('puzzleAnswer').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    checkPuzzle();
+                }
+            });
+        });
+    </script>
 
     <!-- CLI Animation Script -->
     <script>
